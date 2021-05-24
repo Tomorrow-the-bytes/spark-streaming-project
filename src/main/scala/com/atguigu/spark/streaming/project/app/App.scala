@@ -10,6 +10,9 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
   * Created by shkstart on 2021/5/23.
   */
 trait App {
+
+  def doSomething(adsInfoStream: DStream[AdsInfo]): Unit
+
   def main(args: Array[String]): Unit = {
 
     val conf: SparkConf = new SparkConf().setMaster("local[*]").setAppName("streaming")
@@ -30,6 +33,10 @@ trait App {
     ssc.awaitTermination()
   }
 
-  def doSomething(adsInfoStream: DStream[AdsInfo]): Unit
+
+
+}
+
+object App {
 
 }

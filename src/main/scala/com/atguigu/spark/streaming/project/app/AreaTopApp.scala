@@ -47,7 +47,7 @@ object AreaTopApp extends App{
 
 //隐式类：Redis连接
     import com.atguigu.spark.streaming.project.util.RealUtil._
-    result.saveToRedis()
+    result saveToRedis()
 
   }
 
